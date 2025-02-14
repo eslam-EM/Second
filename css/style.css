@@ -1,0 +1,1208 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    background-color: #b5babead;
+}
+/* تنسيق الهيدر */
+.header {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* تنسيق اللوجو بالأيقونة */
+.logo {
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 60px;
+    color: #ff4500;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* تنسيق الروابط */
+.headerlinks {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+}
+
+.headerlinks li {
+    position: relative;
+}
+
+.headerlinks li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 15px;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثيرات before و after */
+.headerlinks li a::before,
+.headerlinks li a::after,
+.headerlinks li a span::before,
+.headerlinks li a span::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    transition: all 0.4s ease-in-out;
+}
+
+.headerlinks li a::before {
+    width: 2px;
+    height: 0;
+    top: 0;
+    left: 0;
+}
+
+.headerlinks li a::after {
+    width: 2px;
+    height: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.headerlinks li a span::before {
+    width: 0;
+    height: 2px;
+    top: 0;
+    left: 0;
+}
+
+.headerlinks li a span::after {
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    right: 0;
+}
+
+.headerlinks li a:hover::before,
+.headerlinks li a:hover::after {
+    height: 100%;
+}
+
+.headerlinks li a:hover span::before,
+.headerlinks li a:hover span::after {
+    width: 100%;
+}
+
+/* قائمة الصفحات */
+.selector {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    width: 300px;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    visibility: hidden;
+    
+}
+.selector ul {
+    list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.selector ul li strong {
+    list-style: none; 
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+.headerlinks li:hover .selector {
+    display: flex;
+    visibility: visible;
+    z-index: 1000;
+}
+
+/* الشريط الأسود */
+.black-line {
+    width: 100%;
+    height: 70px;
+    background-color: black;
+}
+
+.black-line-h2 {
+    color: aliceblue;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.u {
+    color: chocolate;
+    font-weight: bold;
+}
+
+.u:hover {
+    font-size: larger;
+}
+
+/* أيقونات البحث، الحساب، والسلة */
+.header-icons {
+    margin-right: 50px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 20px;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+}
+
+.icon:hover {
+    color: #ff6b6b;
+}
+
+/* تصميم السلة مع عداد المنتجات */
+.cart {
+    position: relative;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+
+
+
+.promo {
+    background-image:url(../image/Austin+Newborn+Photographer+88.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+    padding: 50px;
+    height: 77vh;
+}
+.promo .container {
+    max-width: 500px;
+    padding-left: 120px; 
+    text-align: left; 
+}
+.promo h1 {
+    font-size:32px;
+    font-weight:200;
+    color: rgb(222, 99, 11);
+    margin-bottom:20px;
+    text-align: center;
+    font-family:"Pacifico", serif;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.promo h2 {
+    font-size: 2.5rem;
+    font-weight:700;
+    color: #000;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: "Poiret One", serif;
+}
+.promo p {
+    font-size:18px;
+    color: #232020;
+    margin-bottom: 30px;
+    line-height: 1.7;
+    text-align: justify; 
+    text-align: center;
+    font-family:"Encode Sans Condensed", serif;
+}
+.promo .shop-now-btn {
+    display: inline-block;
+    height:70px;
+    font-size:20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+    background-color: #000000;
+    text-decoration: none;
+    border: 1px solid rgb(255, 254, 254);
+    border-radius:10px;
+    margin-left:140px;
+    text-align:center;
+    padding: 24px 28px;
+    margin-top:25px;
+}
+.promo .shop-now-btn:hover {
+    background-color: #4d8105;
+    border: 3px solid black;
+    color: #000;
+}
+
+
+
+
+
+        .parent-section1 {
+            overflow: hidden;
+        }
+        
+        .div1-section1, 
+        .div2-section1,
+        .div3-section1 {
+            margin-top: 50px;
+            width: 400px;
+            height: 400px;
+            float: left;
+            position: relative;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            overflow: hidden; /* إخفاء المحتوى الزائد */
+        }
+        
+        .div1-section1 {
+            margin-left: 100px;
+            background-image: url(../image/1\ \(3\).jpeg);
+        }
+        
+        .div2-section1 {
+            margin-left: 40px;
+            background-image: url(../image/1\ \(1\).jpeg);
+        }
+        
+        .div3-section1 {
+            margin-left: 40px;
+            background-image: url(../image/6ef6bae9-6f2a-4f52-a036-360e948ff852.jpeg);
+        }
+        
+        .h2-section1 {
+            position: absolute;
+            bottom: 40px; 
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.7);
+            transition: all 0.5s ease; 
+        }
+        
+        .div1-section1:hover .h2-section1,
+        .div2-section1:hover .h2-section1,
+        .div3-section1:hover .h2-section1 {
+            bottom: 70px; 
+        }
+        
+        .shop-section1 {
+            position: absolute;
+            bottom: -50px; 
+            left: 50%;
+            transform: translateX(-50%);
+            color: rgb(0, 0, 0);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 18px;
+            transition: all 0.5s ease; 
+        }
+        
+        .div1-section1:hover .shop-section1,
+        .div2-section1:hover .shop-section1,
+        .div3-section1:hover .shop-section1 {
+            bottom: 30px; 
+            transform: translateX(-50%) scale(1.1); 
+        }
+        
+
+
+
+
+
+
+
+
+
+        .parent-section2{
+            margin-top: 100px;
+        
+        }
+        .h1-section2{
+            margin-left: 150px;
+            display: inline;
+            font-weight: bolder;
+            font-size: 35px;
+        }
+        .d{
+            display: inline-block;
+            margin-left: 500px;
+        }
+        .ul-section2 li{
+            display: inline-block;
+            margin-right: 40px ;
+            margin-top: 20px;
+            font-weight: bolder;
+            font-size: 25px;
+        }
+        .line-women{
+            width: 80px;
+            height: 10px;
+            background-color: red;
+            margin-top: 40px;
+            transform: translateX(1050px);
+        
+        }
+        .li-women{
+            color: red;
+        }
+        .hr{
+            width: 1210px;
+            margin-left: 150px;
+        }
+        
+        .section1 {
+            margin-top: 20px;
+            overflow: hidden; 
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+        }
+        .item1, .div1front, .div1back {
+            width:  300px;
+            height: 370px;   
+            background-color: rgb(8, 50, 2);
+            position: relative;
+        }
+        .item1 {
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+        .div1front, .div1back {
+            position: absolute;
+        }
+        .div1front {
+            z-index: 1;
+            backface-visibility: hidden;
+        }
+        .item1:hover {
+            transform: rotateY(180deg);
+        }
+        .div1back {
+            transform: rotateY(180deg);
+        }
+        
+        .item2, .div2front, .div2back {
+            width: 300px;
+            height: 370px;
+            background-color: rgb(8, 50, 2);
+            position: relative;
+        }
+        .item2 {
+            margin-left: 20px;
+            transition: all 2s;
+            transform-style: preserve-3d;
+        }
+        .div2front, .div2back {
+            position: absolute;
+        }
+        .div2front {
+            z-index: 1;
+            background-color: blue;
+            backface-visibility: hidden;
+        }
+        .item2:hover {
+            transform: rotateY(180deg);
+        }
+        .div2back {
+            transform: rotateY(180deg);
+        }
+        .linlin{
+            overflow: auto;
+        } 
+        .h2items{
+            float: left;
+            margin-top: 30px;
+            margin-left: 160px;
+        }
+        .h2items2{
+            float: left;
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+        .h2items3{
+            float: left;
+            margin-top: 30px;
+            margin-left: 100px; 
+        }
+        .h2items4{
+            float: left;
+            margin-top: 30px;
+            margin-left: 100px;
+        }
+        .linin{
+            text-decoration: line-through;
+            display: inline;
+            margin-left: 30px;
+        }
+        .linh2{
+            display: inline;
+        }
+        .both{
+            clear: both;
+        }
+        
+        /* أيقونات على الصور */
+        .icons-overlay {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 10px;
+            border-radius: 10px;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        .item1:hover .icons-overlay,
+        .item2:hover .icons-overlay {
+            opacity: 1;
+        }
+        
+        .icon {
+            font-size: 18px;
+            padding: 10px;
+            background: #f5f5f5;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .icon i {
+            color: #333;
+        }
+        
+        .icon:hover {
+            background: #ddd;
+        }
+        
+        .icon:hover i {
+            color: #000;
+        }
+        
+
+
+
+
+
+
+
+
+
+
+.divcustomer {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-color: rgba(98, 169, 169, 0.233);
+}
+
+.divcustomer-hr1 {
+    margin-top: 150px;
+    color: #000;
+}
+
+.customer-h2 {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 35px;
+}
+
+.customer-p {
+    margin: auto;
+    padding-left: 100px;
+    padding-top: 30px;
+    max-width: 650px;
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.customerimg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-image: url(../image/s-team-1.png);
+    background-size: cover;
+    margin-left: 43%;
+    margin-top: 80px;
+    float: left;
+}
+
+.customername {
+    margin-left: 50%;
+    margin-top: 100px;
+}
+
+/* أسهم التحكم كأيقونات فقط */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none; /* منع التحديد */
+}
+
+.left {
+    left: 20px;
+}
+
+.right {
+    right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+.like {
+    margin-top: 100px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.sectionlike {
+    margin-top: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* لجعل الأسهم ضمن القسم */
+}
+
+/* عناصر المنتج */
+.item1like, .div1frontlike, .div1backlike {
+    width: 300px;
+    height: 370px;
+    background-color: rgb(8, 50, 2);
+}
+
+.item1like {
+    position: relative;
+    overflow: hidden;
+}
+
+.div1frontlike, .div1backlike {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div1frontlike {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.div1backlike {
+    transform: translateY(-100%);
+}
+
+.item1like:hover .div1backlike {
+    transform: translateY(0);
+}
+
+.item1like:hover .div1frontlike {
+    transform: translateY(100%);
+}
+
+/* تأثيرات المنتج الثاني */
+.item2like, .div2frontlike, .div2backlike {
+    width: 300px;
+    height: 370px;
+    background-color: rgb(8, 50, 2);
+}
+
+.item2like {
+    margin-left: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.div2frontlike, .div2backlike {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div2frontlike {
+    z-index: 1;
+    backface-visibility: hidden;
+}
+
+.div2backlike {
+    transform: translateY(-100%);
+}
+
+.item2like:hover .div2backlike {
+    transform: translateY(0);
+}
+
+.item2like:hover .div2frontlike {
+    transform: translateY(100%);
+}
+
+.linlinlike {
+    overflow: auto;
+}
+
+/* نصوص الأسعار */
+.h2itemslike {
+    float: left;
+    margin-top: 30px;
+    margin-left: 160px;
+}
+
+.h2items2like {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.h2items3like {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.h2items4like {
+    float: left;
+    margin-top: 30px;
+    margin-left: 100px;
+}
+
+.lininlike {
+    text-decoration: line-through;
+    display: inline;
+    margin-left: 30px;
+}
+
+.linh2like {
+    display: inline;
+}
+
+/* أسهم التنقل كأيقونات فقط */
+.arrow-like {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    user-select: none;
+}
+
+.arrow-like.left {
+    left: 20px;
+}
+
+.arrow-like.right {
+    right: 20px;
+}
+
+
+.icons-overlay {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.itemlike:hover .icons-overlay {
+    opacity: 1;
+}
+
+.icon {
+    font-size: 18px;
+    padding: 10px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icon i {
+    color: #333;
+}
+
+.icon:hover {
+    background: #ddd;
+}
+
+.icon:hover i {
+    color: #000;
+}
+
+.arrow-like {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+}
+
+.arrow-like.left {
+    left: 5px;
+}
+
+.arrow-like.right {
+    right: 5px;
+}
+
+.arrow-like:hover {
+    background: rgb(0, 0, 0);
+}
+
+
+
+
+
+
+
+.parentNews{
+    overflow: hidden;
+    width: 100%;
+    height: 750px;
+    background-color: rgba(98, 169, 169, 0.233) ;
+    margin-top: 150px;
+}
+.h1news{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 35px;
+}
+.div1-news, .div2-news,.div3-news{
+    margin-top: 50px;
+    width: 400px;
+    height: 400px;
+    float: left;
+    
+}
+.div1-news{
+    margin-left: 100px;
+        background-image: url(../image/Versace\ Eau\ Fraiche\ for\ Men\ Eau\ de\ Toilette\ Spray\,\ 3_4\ Ounce.jpeg);
+        background-size: cover;
+}
+.div2-news{
+    margin-left: 40px;
+    background-image: url(../image/aa5b1dd3-5bff-4056-bc9b-c4de53c0bd77.jpeg);
+    background-size: cover;
+}
+.div3-news{
+    margin-left: 40px ;
+    background-image: url(../image/Ryan\ growl\ Trevisan\ -\ bound\ by\ vengeance\ -\ born\ in\ blood\ series.jpeg);
+    background-size: cover;
+}
+
+.h2-news{
+    text-align: center;
+    padding-top: 370px;
+}
+.shop-news{
+    color: chocolate;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-left: 150px;    
+}
+.div1-news:hover{
+    transform: scale(1.02);
+}
+.div2-news:hover{
+    transform: scale(1.02);
+}
+.div3-news:hover{
+    transform: scale(1.02);
+}
+
+.textnews1{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 100px;
+}
+.textnews2{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 40px;
+}
+.textnews3{
+    width: 400px;
+    height: 400px;
+    float: left;
+    margin-left: 40px;
+}
+.newsh4{
+    padding-top: 20px;
+}
+.newsh2{
+    font-size: 20px;
+}
+.newsh2:hover{
+    color: red;
+}
+.newsa{
+    color: #000;
+    font-size: large;
+}
+.newsa:hover{
+    font-size: larger;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+    background: #f9f9f9;
+    gap: 20px;
+}
+
+.feature {
+    width: 300px;
+    padding: 20px;
+    transition: transform 2s ease;
+}
+
+.feature h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.feature p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* أيقونة الرمادية والملونة داخل نفس الكونتينر */
+.icon-container {
+    position: relative;
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+}
+
+/* الأيقونة الافتراضية (رمادية) */
+.default-icon {
+    font-size: 70px;
+    color: #7f8c8d;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transition: transform 2s ease, opacity 2s ease;
+}
+
+/* الأيقونة الملونة المخفية افتراضيًا */
+.colored-icon {
+    font-size: 70px;
+    color: #2980b9;
+    position: absolute;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: transform 2s ease, opacity 0.2s ease;
+}
+
+/* تأثير التحويل عند التمرير */
+.feature:hover {
+    transform: translateY(-15px);
+}
+
+/* إخفاء الأيقونة الرمادية عند التمرير */
+.feature:hover .default-icon {
+    transform: translateY(-15px);
+    opacity: 0;
+}
+
+/* إظهار الأيقونة الملونة عند التمرير */
+.feature:hover .colored-icon {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding: 2rem 1rem;
+    font-family: Arial, sans-serif;
+}
+
+/* جعل النص، الزر، والأيقونات على نفس السطر */
+.newsletter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+    padding: 0 5%;
+    margin-bottom: 70px; /* مسافة بين هذا القسم والـ hr */
+}
+
+/* النص على اليسار */
+.newsletter-content {
+    flex: 1;
+    text-align: left;
+}
+
+.newsletter h2 {
+    font-size: 1.5rem;
+}
+
+.newsletter p {
+    font-size: 1rem;
+}
+
+/* جعل زر الاشتراك والأيقونات في نفس السطر */
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+/* تنسيق حقل الإدخال */
+.newsletter input {
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    border: none;
+    width: 320px;
+    border-radius: 5px;
+}
+
+/* زر الاشتراك */
+.newsletter button {
+    background-color: #e63946;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.75rem 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.newsletter button:hover {
+    background-color: #c72e3a;
+}
+
+/* جعل الأيقونات في نفس السطر مع الزر */
+.newsletter-icons {
+    display: flex;
+    gap: 15px; /* مسافة بين الأيقونات */
+    margin-left: 150px; /* إبعاد الأيقونات عن الزر */
+
+}
+
+/* تنسيق أيقونات التواصل الاجتماعي */
+.newsletter-icons .social-icon {
+    font-size: 1.5rem;
+    color: #415e84e9;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.newsletter-icons .social-icon:hover {
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* تنسيق الـ hr */
+.hrfooter {
+    border: 0;
+    height: 1px;
+    background: #444;
+    margin: 30px 0;
+}
+
+/* جعل اللوجو والنص بجانب بعض */
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon1 {
+    font-size: 30px;
+    color: #ff4500;
+}
+
+.brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* روابط الفوتر */
+.footer-links {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+    text-decoration: underline;
+}
+
+/* القسم السفلي للفوتر */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #444;
+    padding-top: 1rem;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+.footer-bottom p span {
+    animation: heart-pulse 2s infinite;
+}
+
+/* تأثير نبض القلب */
+@keyframes heart-pulse {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
